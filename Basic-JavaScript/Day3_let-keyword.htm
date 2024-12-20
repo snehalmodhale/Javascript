@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- let = modern JS feature -->
+
+    <!-- Used to declred JS variable  -->
+
+    <script>
+
+        let age =35;
+        console.log(age);
+
+
+        // we can declared variable without initilization
+        let name;
+        name='snehal';
+        console.log(name);
+
+        // we can redclared variables with same name
+        let EmpPan='ABCDE';
+        let EmpId ='ZXYSFS';
+        console.log(EmpPan);
+
+        // we can update value
+
+        let skills='Reactjs';
+        skills='Angular';
+        console.log(skills);
+
+        // scope = block level /local scope
+
+        let x = 200;
+        console.log(x);
+        if (x){
+            let x=400;
+            console.log(x);
+
+        }
+        console.log(x);   //its global 
+
+
+        let y = 250;
+        console.log(y);
+
+        function Demo(){
+            let y =300;
+            console.log(y);
+
+        }
+        Demo();
+        console.log(y);
+
+    </script>
+
+</body>
+</html>

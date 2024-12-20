@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: orange;
+            margin: 50px auto;
+            border: solid red 5px;
+            border-radius: 30px;
+        }
+
+
+
+        .newclass {
+            height: 400px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: tomato;
+            border-radius: 40px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <p id="data" class="abc xyz pqr">Hello Dear, Good Morning <b> Welcome To The HTML DOM Methods and Properties </b>
+        And Mondern JS </p>
+
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleclass()">Toggle Class</button>
+
+    <br><br>
+    <hr>
+    <hr>
+
+    <div class="box box1 box2" id="box"></div>
+
+
+
+    <script>
+
+        //   property
+
+        // value
+        // style
+
+        // ********************************************************************
+
+        // DOM Methods And Properties
+
+        // innerHTML - Return html text content including spacing and inside element
+        // innerText- Return only text content excluding inside element and spacing
+        // outerText - same work like innerText
+
+        // textContent-return text content including inside spacing but excluding inside element
+        // outerHTML- Return whole html element as it is
+
+        // *********************************************
+        // innerHTML
+        var result1 = document.getElementById('data').innerHTML;
+        console.log(result1);
+
+        //innerText
+        var result2 = document.getElementById('data').innerText;
+        console.log(result2);
+
+
+        //outerText
+        var result3 = document.querySelector('#data').outerText;
+        console.log(result3);
+
+        //textContent
+        var result4 = document.querySelector('p').textContent;
+        console.log(result4)
+
+        //outerHTML
+        var result5 = document.getElementById('data').outerHTML;
+        console.log(result5);
+
+        // ****************************************************************************************
+
+        // className()- Return class name in string format
+
+        var result6 = document.getElementById('data').className;
+        console.log(result6);
+
+
+
+        // *************************************
+
+
+        // classList-
+        //Return collection of a dom token list like array format
+
+        var result7 = document.querySelector('#box').classList;
+        console.log(result7);
+
+
+        //3 Methods of classList
+        // classList.add()
+        // classList.remove()
+        // classList.toggle()
+
+
+        //removeClass
+
+        const removeClass = () => {
+            document.getElementById('box').classList.remove('box')
+        }
+
+
+        //addclass
+
+        const addClass = () => {
+            // document.querySelector('#box').classList.add('box');
+            document.querySelector('#box').classList.add('newclass');
+        }
+
+        //toggleclass
+
+        const toggleclass = () => {
+            document.getElementById('box').classList.toggle('newclass');
+        }
+
+        // *****************************************************************************************
+
+
+        // getAttribute()
+        // setAtrribute()
+
+        // var result7=document.getElementById('box').getAttribute('class/id/name/type/placeholder/style/value');
+        // var result7=document.getElementById('box').getAttribute('class');
+        var result7 = document.getElementById('box').getAttribute('id');
+        console.log(result7)
+
+
+        //setAttribute
+        document.getElementById('box').setAttribute('class', 'addnewclass')
+        // document.getElementById('box').setAttribute('id', 'newId')
+
+        // get classname
+        console.log(document.getElementById('box').classList);//
+        console.log(document.getElementById('box').className);//
+
+
+        // **********************************************************************
+
+
+        // createElement
+        // we can create html element dynamically
+
+        //appendChild()
+        //replaceChild()
+        //createTextNode
+
+        // let h1 = document.createElement('marquee');
+        // h1.innerText = "Welcome To The DOM Object";
+        // document.body.appendChild(h1);
+
+
+        // ********************************************
+
+        let tag = prompt('enter a tag name u want ?');
+        let data = prompt('enter what u want inside that tag')
+
+
+        let element = document.createElement(tag);
+        element.innerHTML = data;
+
+        document.body.appendChild(element);
+
+
+        // ****************************************************
+
+        // const h1 = document.createElement("h1");
+        // const textNode = document.createTextNode("Hello World");
+        // h1.appendChild(textNode);
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

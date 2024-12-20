@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="alert('Hello onload Event called')" id="body" onresize="demo2()"
+    onscroll="demo()" style="height: 1000px;">
+
+
+    <!-- Window Events -->
+
+    <!-- onload - when we load our window / html document-->
+    <!-- onscroll  - when we scroll our window-->
+    <!-- onresize - when we resize our window screen i.e minimize or maximize  -->
+
+
+    <script>
+
+        const demo = () => {
+            console.log("onscroll Event called");
+        }
+
+
+
+        // innerWidth- return width of a window screen but excluding dev tool,console
+        //outerWidth- return total width of a window screen
+        //innerHeigth- return inner height of a screen
+        //outerHeight- return total height of a window screen 
+
+        const demo2=()=>{
+            console.log('Inner Width '+window.innerWidth)
+            console.log('Outer Width '+window.outerWidth)
+
+            console.log(`Inner Height Is ${window.innerHeight}`)
+            console.log(`Outer Height Is ${window.outerHeight}`)
+        }
+    </script>
+
+</body>
+
+</html>

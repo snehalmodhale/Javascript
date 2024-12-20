@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Unary and binary oprators -->
+     <!-- oprators = to perform multiple opration.
+
+     oprand = a,b,c
+     operator = -, +, * -->
+
+     <!-- expression  -->
+
+     <!-- Arithmatic oprators= + ,- ,* , / ,%
+
+     Inc/Dec oprators. = ++ , --
+
+     Assignment oprators. =>  =, += , -= , /= , %=
+
+     Logical oprators. = && , || ,!
+
+     Comparasion oprators. = < , > ,<= ,>= , !=
+
+     Eqality oprators. =>    == ,  ===
+
+     Bitwise Oprators.=> & ,| , ~ ,^ , (xor) -->
+      
+     <script>
+
+        // Arithmatic oprators
+
+        let a =20;
+        let b =100;
+
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a/b);
+        console.log(b%a);   // return reminder
+
+        console.log(a+b*a);   //2020
+
+        // ********************************************
+
+        // Increment/ Decrement oprator
+
+        // ++ a - Pre increment 
+        // -- b = Pre increment 
+
+
+        // a++  - post increment
+        // b-- = post inc
+
+        var c =20
+        // c--; 
+        c++ ;
+        console.log(c);
+
+        var d = 10;
+        // console.log(++d);
+        // console.log(d++);
+        console.log(d--);
+        console.log(--d);
+
+        // Logical oprator 
+
+        // 0 = false
+        // 1 = true
+
+        // logical and(&&)
+        // 1 && 1 = 1
+        // 1 && 0 = 0
+        // 0 && 1 = 0
+        // 0 && 0 = 0
+
+
+        console.log(10> 5 && 100> 50);    // T & T =T
+       console.log(10< 5 && 100> 50);  // F &F =F
+
+
+        // logical OR (||)
+        //  1 || 1 = 1
+        //  1 || 0 = 1
+        //  0 || 1 = 1
+        //  0 || 0 = 0
+
+        console.log(10> 16 || 100< 500)
+        console.log(50<400 || 400<10)
+
+    //    Logical   -Not (!)
+
+    // Return true when condition false
+    // Return false when condition true
+
+        console.log(10!= 20)      //true
+        console.log(20 != 20)    //false
+
+    // ********************************************
+    // Assignment oprator =>    LSV = RSV
+
+        var name = 'Snehal';
+        var emp = name;
+
+        console.log(name);
+        console.log(emp);
+
+
+        // += 
+
+        var no1 =20;
+        var no2 = 10;
+
+        console.log(no1+no2);
+        console.log(no1+=no2);
+        console.log(no2-= no1);
+        console.log(no1+=no2);
+
+    // Comparision oprator  = < , > , <= ,>= , !=
+
+        console.log(10>100);       //false 
+        console.log(10>10);            //false
+
+        console.log(10>=100);           //false
+        console.log(10!=100);           //true
+
+    // Equality Oprator =>   ( == , === )
+    //  == ----> Check only value
+    // === ----> cheack value with thier datatype also
+
+        console.log(10==10);        //true
+        console.log(10===10);
+
+        console.log(100 == '100')   //true
+        console.log(100 ==="100")   //false
+
+        var p= 200;
+        var q= '200';
+        console.log(p==q);
+
+
+        // Bitwise oprator = | , & , ^ ,<< , >>
+
+
+     </script>
+     
+</body>
+</html>

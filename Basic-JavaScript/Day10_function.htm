@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Function-
+     
+    
+    Is a block of code i.e  bunch of JS Statements
+
+    Write once and Reused multiple times by calling function
+    Defined once and Reused Multiple times
+
+
+We can called same function multiple times by passing different arguments
+
+
+Mostly Functions are calling on Events i.e on user actions
+
+
+
+Syntax-
+
+function declaration/defination
+
+function fun_name()
+{
+   //block of code
+   //
+}
+   //function calling
+   fun_name()
+
+
+
+    -->
+    <!-- ********************************************************* -->
+
+
+
+    <h1 id="data">Welcome To The JS Modern Function !!</h1>
+
+    <button onclick="Demo1()">Click Here To Add Data</button>
+    <button onclick="ColorHandler()">Change Color</button>
+
+    <script>
+
+
+
+
+        //function declaration/defination
+        function Demo() {
+            // block of code
+            alert('Hello Function!!');
+
+        }
+        // function calling
+        // Demo()
+
+
+
+        // ***********************************
+
+        function Demo1() {
+            document.getElementById('data').innerHTML = "Welcome Dear To Basic Function !!"
+
+        }
+
+
+        // ************************************************
+
+        function ColorHandler() {
+
+            // JS CSS Styling
+            document.getElementById('data').style.color = "orange";
+
+        }
+
+        // ****************************************
+
+
+        function Add() {
+            console.log(100 + 30);
+        }
+        Add()
+
+        // **************************************************************************
+
+        
+
+    </script>
+
+</body>
+
+</html>

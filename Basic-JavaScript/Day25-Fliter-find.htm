@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Filter Find
+     
+
+    Used to return Filtered Data according to the passed conditions in a given function
+
+    
+    A function that accepts up to three arguments.
+     The filter method calls the predicate function one time for each element in the array.
+    -->
+
+    <script>
+
+
+        const Age = [24, 19, 54, 45, 15, 18, 10, 23, 27, 30];
+
+        // filter()- Return multiple data by filtering with test case/conditon which we pass in a function
+
+
+        // Return a new array
+
+        const result2 = Age.filter((val, index, array) => {
+            // console.log(val)
+            return val >= 18;
+        })
+
+
+        console.log(result)
+
+
+        // ********************************************************************************************
+
+
+        // Find 
+        // find()- Return only first matching element with that passed condition in a function
+
+
+        const result3 = Age.find((val, index, array) => {
+            // console.log(val)
+            return val >= 18;
+        })
+
+
+        console.log(result)
+
+
+
+    </script>
+
+</body>
+
+</html>

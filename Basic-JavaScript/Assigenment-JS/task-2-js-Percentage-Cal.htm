@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Take score of 6 technology out of 100
+        // Percentage calculator
+
+        let Score = +prompt('Enter Your score');
+        // function calClass(score)
+        {
+            let per = (score/100)*100;
+            let classify;
+
+            if (per>=75){
+                classify = "Distinction";
+            }
+            else if (per>=65 && per<75){
+                classify = "First Class";
+            }
+            else if (per>=55 && per<65){
+                classify = "Second Class";
+            }
+            else if (per>=45 && per<55){
+                classify = "Pass Class";
+            }
+            else {
+                classify = "Fail";
+            }
+
+            return {
+                percentage:per,
+                Classification:classify
+            }
+        }
+
+        let score = [6,7,8,9,10,11,12,13,14,15];
+        score.forEach(score => {
+            let result = calClass(score);
+            console.log(`score:${score}, percentage:${result.per}%, class: ${result.classify}`);
+        });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

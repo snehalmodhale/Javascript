@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!--  -->
+
+    <label for="">Enter Your Email:</label>
+    <input type="email" placeholder="enter your email" name="" id="useremail" onkeyup="getData()">
+
+    <br>
+
+    <h1 id="data"></h1>
+
+    <script>
+
+
+        function getData() {
+
+            // used to fetch input field values
+            //value property
+
+            var result=document.getElementById('useremail').value;
+            console.log(result);
+            document.getElementById('data').innerHTML=result;
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

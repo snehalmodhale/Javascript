@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Form Events
+     
+    
+    onfocus- when we focus on a input field
+    onblur- when we lost our focus
+    onchange- when we change data  eg select option tag value
+    onselect- when we select text content
+    onsubmit- when we submit our form
+
+    -->
+    <h1 style="color:orange;background-color: black;padding:30px;text-align: center;">Form Events In JS</h1>
+
+    <input type="text" name="" id="inp1" placeholder="enter data" onfocus="demo1()" onblur="demo2()">
+    <br>
+
+    <hr>
+
+
+    <!-- eg -->
+    <input type="text" name="" id="no1" onfocus="Demo3('no2')">
+    <input type="text" name="" id="no2" onfocus="Demo3('no1')">
+
+
+    <br>
+    <hr>
+    <label for="">Choose Your Skill</label>
+    <!-- <select name="" id="skill" onchange="GetSkill()"> -->
+    <select name="" id="skill" onchange="alert(`Your Skill Is ${skill.value}`)">
+
+        <option value="None">Choose Your Skill</option>
+        <option value="ReactJS">ReactJS</option>
+        <option value="NodeJS">NodeJS</option>
+        <option value="Modern JS">Modern JS</option>
+        <option value="other">Other</option>
+
+    </select>
+
+
+    <!-- *************************************************************88 -->
+
+    <hr>
+    <br>
+
+    <!-- <input type="text" name="" id="data" value="John Peter" onselect="alert('You Selected '+data.value)"> -->
+    <input type="text" name="" id="data" value="John Peter" onselect="demo4()">
+
+    <br>
+    <hr>
+
+
+    <!-- onsubmit- -->
+
+
+    <!-- <form action="" onsubmit="alert('Congrats Form SUccessfully Submiited')"> -->
+    <!-- <form action="" onsubmit="SaveForm()"> -->
+
+    <!-- confirm -->
+    <form action="" onsubmit="return confirm('Are You Sure ? ')">
+
+        <label for="">Enter Your Email</label>
+        <input type="email" name="useremail" id="useremail1">
+
+        <br>
+        <br>
+
+        <label for="">Enter Your Password</label>
+        <input type="password" name="userpass" id="userpass">
+
+
+        <br>
+        <br>
+
+        <button>Get A Quote</button>
+
+
+
+    </form>
+
+    <script>
+
+
+        const demo1 = () => {
+            document.getElementById('inp1').style.backgroundColor = "orange";
+        }
+
+
+        //onblur
+        const demo2 = () => {
+            document.getElementById('inp1').style.backgroundColor = "magenta";
+        }
+
+
+        // *******************************************************
+
+        const Demo3 = (data) => {
+            document.getElementById(data).style.backgroundColor = "navy";
+        }
+
+
+
+        // ********************************************************************
+
+        // onchange- when we change data
+        //i.e select tag
+
+        const GetSkill = () => {
+            alert(document.getElementById('skill').value)
+        }
+
+        // *****************************************************8
+
+        // onselect
+
+        const demo4 = () => {
+            var result = document.getElementById('data').value
+            alert(result);
+        }
+
+
+
+        // ************************************************************
+
+        // onsubmit
+
+
+        const SaveForm = () => {
+
+            alert('Congrats Dear !!')
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

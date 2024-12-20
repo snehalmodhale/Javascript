@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+     
+    setInterval-  Async execution
+
+    Executes a same function multiple times in a specific interval
+
+  syntax- setInterval(handler,millisecond)
+
+    -->
+
+
+    <marquee behavior="" direction="right">
+        <h1>setInterval ClearInterval Function</h1>
+    </marquee>
+
+
+
+
+    <!-- <button onclick="A()">Click Here</button> -->
+
+    <hr>
+
+    <button onclick="Ani()">Start Animation</button>
+
+
+    <button onclick="StartInt()">Start Interval</button>
+    <button onclick="StopInt()">Stop Interval</button>
+
+    <br>
+    <hr>
+
+    <img src="./teddy.jpg" alt="" id="img">
+
+
+
+
+    <script>
+
+
+        // function A() {
+        //     alert('Hello Function')
+        // }
+        // A()
+
+
+        // setInterval(handler,millisecond)
+
+        // setInterval(A, 3000)
+
+        // or
+
+        // setInterval(() => {
+        //     document.write("Hello World");
+        // }, 2000)
+
+        // *****************************************************************************
+
+        var mar = 0;
+
+        const Ani = () => {
+            mar += 100;
+            document.getElementById('img').style.marginLeft = mar + "px";
+        }
+
+
+        // ********************************************************
+        var x;
+        function StartInt() {
+            alert('Start Interval!!')
+            x = setInterval(Ani, 1000);
+
+        }
+        // ***********************************************
+        // clearInterval - To clear set interval
+
+        const StopInt = () => {
+
+            alert('Stop Interval!!');
+            clearInterval(x);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

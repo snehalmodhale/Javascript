@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Hoisting In JS -->
+     <!-- we can declared variable after used or we can used variable before declaration -->
+
+     <!-- Js have by default behaviour of variable goes to the top of current scope or function scope 
+      
+     -->
+     <script>
+
+    //  <!-- var is hoisted -->
+
+        // hoisting
+
+        var empRole = 'MERN STACK DEVLOPER';
+        console.log(empRole);
+
+        empId='#4566';
+        console.log(empId);
+        var empId;
+
+        // let and const declaration are not hoisting
+
+        let empskill= 'Angular';
+        console.log(empskill);
+
+        empCTC='20LPA';
+        console.log(empCTC);
+        // let empCTC;
+        // const empCTC;
+
+     </script>
+
+</body>
+</html>

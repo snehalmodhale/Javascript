@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Switch Statement = used to handle multiple cases, opration at a same time -->
+
+    <script>
+        // switch (data){
+        //     case "":{
+
+        //     }
+        //     case"":{
+
+        //     }
+        //     default:{
+
+        //     }
+        // }
+
+
+        let monthNo = +prompt('Enter A monthNo :');
+        switch(monthNo){
+            case 1: alert('Janavary month');
+            break;
+            case 2: alert('Feb month');
+            break;
+            case 8: alert('Aug month');
+            break;
+            default: alert ('Pls Enter A valid month');
+        }
+
+
+        // ********************************
+
+        let no1 = +prompt('Enter Number 1', 0)
+        let no2 = +prompt('Enter Number 2', 0)
+
+        let op = prompt('Choose Any Operation - +,  -,  /,  *, %');
+
+        switch (op) {
+
+            case '+': alert(`${no1} + ${no2} =  ${no1 + no2} `)
+                break;
+
+            case '-': alert(`${no1} - ${no2} = ${no1 - no2}`);
+                break;
+
+            case '*': alert(`${no1} * ${no2} = ${no1 * no2}`);
+                break;
+
+
+            case '/': alert(`${no1} / ${no2} = ${no1 / no2}`);
+                break;
+
+
+            case '%': alert(`${no1} % ${no2} = ${no1 % no2}`);
+                break;
+
+            default: alert('Sorry Pls Choose A Valid Operation ')
+        }
+
+
+
+    </script>
+</body>
+</html>

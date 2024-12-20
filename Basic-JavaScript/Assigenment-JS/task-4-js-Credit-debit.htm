@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Credit Debit Balance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            width: 40%;
+            cursor: pointer;
+        }
+        #balance {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Credit Debit System</h1>
+
+    <input type="number" id="amount" placeholder="Enter amount">
+    <br>
+    <button onclick="addCredit()">Credit</button>
+    <button onclick="addDebit()">Debit</button>
+
+    <div id="balance">Current Balance: 0</div>
+</div>
+
+<script>
+    let balance = 0;
+
+    function addCredit() {
+        const amount = parseFloat(document.getElementById("amount").value);
+        if (!isNaN(amount) && amount > 0) {
+            balance += amount;
+            updateBalance();
+        } else {
+            alert("Please enter a valid amount.");
+        }
+        document.getElementById("amount").value = ''; // Clear input
+    }
+
+    function addDebit() {
+        const amount = parseFloat(document.getElementById("amount").value);
+        if (!isNaN(amount) && amount > 0) {
+            if (balance >= amount) {
+                balance -= amount;
+                updateBalance();
+            } else {
+                alert("Insufficient balance.");
+            }
+        } else {
+            alert("Please enter a valid amount.");
+        }
+        document.getElementById("amount").value = ''; 
+    }
+
+    function updateBalance() {
+        document.getElementById("balance").innerText = `Current Balance: ${balance}`;
+    }
+</script>
+
+</body>
+</html>

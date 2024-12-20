@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Conditional statement =  To check condition and work accordingly.
+
+        // --> if
+        // --> if else
+        // --> if else if else
+        // --> switch
+
+        // ********* Looping statement ***********
+
+        // --> while
+        // --> do while
+        // --> for loop
+
+        // **** Modern JS = (for in , for of , for each , map) *****
+
+
+        // i) if Statement : it check the only one condition.
+
+        let age = 18;
+        if (age>= 18);
+        {
+            alert('Hello Congrats');
+        }
+
+
+        // ii) if_else statement : Used to check two condition.
+            if (true)
+            {
+            }
+            else{   
+            }
+
+
+        // Dialog box
+        // Prompt () :- Used to take data dhynamically from user.
+
+        // var no1 =27; 
+
+        var no1 = prompt('Enter No to Check Even or Odd', 0)
+        if(no1%2 == 0){
+            console.log('$ {no1} is a even No');
+            alert(`${no1} is a even no`)
+        }
+        else{
+            alert(`${no1} is a odd No`)
+        }
+
+    // *********************************
+
+        // Promt eg:
+        // parsing:-  convert string to integer.(+)
+        // number(): 
+        // parseInt():
+
+        let num1 = Number(prompt('Enter number 1', 0));
+        let num2 = parseInt(prompt('Enter number 2', 0));
+        let num3 = +prompt('Enter number 3', 0)
+        console.log(typeof num1)
+        console.log(typeof num2)
+        console.log(typeof num)
+        alert(num1 + num2 + num3)
+
+// *****************************************************
+
+      // Take age from user and check is elgible of Voting 
+        let Age = +prompt('Enter Your Age', 18);
+        if (Age >= 18) {
+            alert('Congrats !!!')
+        }
+        else {
+            alert('Sorry Comeback')
+        }
+    
+// *********************************************
+
+        // Shopping Cart Eg
+        // Take shop_amt from user
+
+        // shop_amt>=10000
+        // disc=10%
+
+        // <=10000 - disc=0;
+
+        let shop_amt = +prompt('Enter Your Shopping Amount');
+        let disc = 0;
+
+        if (shop_amt >= 1000) {
+
+            disc = 10;
+        }
+        else {
+            disc = 0;
+        }
+
+        let disc_amt = shop_amt * disc / 100;
+
+        document.write(`<h1>Your Shopping Amount Is ${shop_amt}</h1>`)
+        document.write(`<h1> You Get A ${disc}% Discount So Your Discount Amount Is ${disc_amt} </h1>`)
+
+        let netTotal = shop_amt - disc_amt
+        document.write(`<h1>Net Total Is <mark> ${netTotal} </mark> </h1>`)
+
+
+    </script>
+</body>
+</html>

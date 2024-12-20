@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Math Object
+     
+    To Perform mathimatical operations
+
+
+    -->
+    <script>
+
+        var math = Math;
+        console.log(math);
+
+        console.log(Math.PI)
+        console.log(Math.SQRT2)
+        console.log(Math.LN2)
+        console.log(Math.LN10)
+
+        //   ****************************************************************
+
+
+        // min
+        // max
+
+        console.log(Math.min(1000, 2000, 4000, 500, 400, 150));
+        console.log(Math.max(1000, 2000, 4000, 500, 400, 150));
+
+
+        // Array
+        const arr = [100, 300, 400, 600, 1000, 3000, 2500];
+        console.log(Math.min(arr));//NaN
+
+        // *****************************************************************
+
+        // Solution
+
+        // Spread Operator
+        //Modern / ES-6 Features
+        // Indicate by ...
+        //Used to extract Array Values, Concat Arrays,Replace ....
+
+        console.log(Math.min(...arr));//100
+        console.log(Math.max(...arr));//30000
+
+        // *****************************************************************************
+
+
+        // round-Return a nearest rounded value
+
+        // >0.50-Return largest integer
+        // <-.5 - Return nearest smallest integer
+
+
+        // ceil- - Return nearest Largest interger
+        // floor- -Return smallest nearest integer
+
+
+        console.log(Math.round(23.34));//23
+        console.log(Math.round(23.60));//24
+        console.log(Math.round(23.50));//24
+
+        console.log(Math.ceil(23.23));//24
+        console.log(Math.ceil(23.53));//24
+
+        console.log(Math.floor(23.23));//23
+        console.log(Math.floor(23.65));//23
+
+
+        // 
+        console.log(Math.round(-35.54));//-36
+        console.log(Math.ceil(-35.54))//-35
+        console.log(Math.floor(-35.54))//-36
+
+        // *******************************************************************
+
+
+        // trunc- Remove a decimal no and return a integer
+
+        console.log(Math.trunc(23.45));//23
+        console.log(Math.trunc(23.95));//23
+
+        // ******************************************************
+
+        // random- Generate a pseudorandom number between 0 and 1
+
+        console.log(Math.random());//
+
+        // 2 digit no
+
+        console.log(Math.random() * 100);
+
+
+        //trunc
+        console.log(Math.trunc(Math.random() * 100));
+
+        // 4 digit otp
+        alert(Math.trunc(Math.random() * 10000))
+
+
+
+        // ****************************************************************8
+
+        // sqrt- Return sqrt of a given no
+        // cbrt - Return a cbrt of a given no
+        // pow- Return power of a given no - pow(base,power)
+
+
+        console.log(Math.sqrt(25));//5
+        console.log(Math.sqrt(625));//25
+        console.log(Math.sqrt(600));//24.49
+
+        console.log(Math.cbrt(8));//2
+        console.log(Math.cbrt(27));//3
+
+
+
+        // *****************************************************
+        // same like a Exponential operator- **
+
+        console.log(Math.pow(2, 2));//4
+        console.log(Math.pow(2, 3));//8
+        console.log(Math.pow(3, 2));//9
+
+
+        //Returns the nearest single precision float representation of a number.
+        // Math.fround()
+        console.log(Math.fround(23.2))
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

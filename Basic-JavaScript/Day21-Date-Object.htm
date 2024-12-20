@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Date Object -->
+
+    <script>
+
+        let today = new Date();
+        // let today=Date();
+        console.log(today);
+
+
+        // Separate date;
+        // get Methods
+
+        console.log(today.getFullYear());//2024
+        // Month
+
+        console.log(today.getMonth());//8 - 0-Jan  -1-feb 2-mar  8-sep 11-Dec
+        console.log(today.getMonth() + 1);//9
+
+        console.log(today.getDate())//9
+
+        console.log(today.getDay());//1   0-sun  1-Mon
+
+
+        console.log(today.getHours())
+        console.log(today.getMinutes())
+        console.log(today.getMilliseconds())
+
+
+        // *********************************************************************
+
+
+        // set Date
+        // let newDate=new Date();
+
+        // let newDate = new Date('2030 Aug 20,10:10:10');
+        // console.log(newDate);
+
+
+        let newDate = new Date();
+        //separate set date
+
+        // set methods
+        newDate.setFullYear(2030)
+        newDate.setMonth(0)
+
+        newDate.setHours(10)
+
+        console.log(newDate);
+
+        // *****************************************************
+
+
+
+        // 3 Additional Date time Methods
+
+        // Only Todays date with proper format
+        // toLocaleDateString()
+
+        //Only Current Time proper format
+        // toLocaleTimeString()
+
+        // Both date time
+        // toLocaleString()
+
+
+        var result = new Date()
+        alert(result);
+
+        //Only todays date
+        alert(result.toLocaleDateString());
+
+        //only current time
+        alert(new Date().toLocaleTimeString())
+
+
+        // Both Date time
+        alert(result.toLocaleString());
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

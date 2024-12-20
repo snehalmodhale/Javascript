@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3 types of declered variables  -->
+
+    <!-- var = to declered JS variable.
+        let 
+        const 
+    -->
+<script>               
+
+    // var--- to declared JS variable
+
+    var age=25;
+    console.log(age);
+
+    // we can declared variable without initialiazation
+
+    var name;
+    name='snehal';
+    console.log(name);
+
+    // we can redeclared variable with same name
+
+    var empId=1234;
+    var empId=3456;
+    console.log(empId);
+
+    // we can update value
+    var productId=12345;
+    productId=67890;
+    console.log(productId);
+
+    // Global scope =variable throughout acessibale
+
+    var x = 100;
+    console.log(x);
+    if(true){
+        var x =200;
+        console.log(x)
+    }
+
+    console.log(x);
+
+    // *********************
+
+    var y =300;
+    console.log(y);
+    function Demo(){
+        var y = 500;
+        console.log(y);
+    }
+    Demo()
+    console.log(y);
+
+</script>
+
+</body>
+</html>

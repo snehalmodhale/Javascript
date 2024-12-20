@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+
+            height: 400px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: tomato;
+            border: solid red 5px;
+
+
+
+        }
+
+
+        .box2 {
+            height: 400px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Events-
+     
+    JS is events based SL
+
+    Do something on users action i.e Events
+    
+
+    4 Types of Events In JS
+
+    on prefix -events
+     
+    mouse Events-
+                 
+            onclick- when we click on mouse button
+            ondblclick - when we dbl click on mouse button
+            oncontextmenu- when we right click on mouse button i.e called before contextmenu displayed
+            onmouseover- when we over mouse on that element
+            onmouseleave- when we leave mouse from that specific element
+            onmousenter- when we entering on a specific element
+            onmouseout- when we out from that specific element
+            onmouseup- when we realsed pressed mouse button
+            onmousedown- when we pressed mouse button
+            onmousemove-when mouse movement take place
+            onmousewheel-when we used wheel button
+
+
+
+    Keyboard Events
+               onkeypress
+               onkeyup
+               onkeydown
+
+    Form Events
+
+               onsubmit
+               onblur
+               onfocus
+               onselect
+               onchange
+
+
+    Window Events
+
+                 onload
+                 onscroll
+                 onresize
+
+    -->
+
+    <!-- **************************************************************************************8 -->
+
+
+    <!-- onclick- when we click on button -->
+    <button onclick="alert('Hello onclick Events in JS')">Click Here</button>
+    <button onclick="AddData()">Add Data</button>
+
+    <!-- ondblclick - when we dbl click on mouse button -->
+    <button ondblclick="alert('Hello dblclick events')">dblclick here</button>
+    <button ondblclick="ChangeColor()">change color on dbl click</button>
+
+
+    <!-- oncontextmenu - when we right click on mouse button -->
+    <!-- The right button of the mouse is clicked (before the context menu is displayed). -->
+    <button oncontextmenu="alert('oncontextmenu event called')">oncontextmenu Event</button>
+
+
+
+    <!-- ************************************************************************ -->
+
+    <h1 id="data"></h1>
+
+
+    <hr>
+    <br>
+
+    <div class="box" id="box1" onmouseover="demo1()" onmouseleave="demo2()" onmouseup="demo3()" onmousedown="demo4()">
+    </div>
+
+    <div class="box2" id="box2" onmouseenter="demo5()" onmouseout="demo6()" onmousemove="demo7()" onmousewheel="demo8()"></div>
+
+    <script>
+
+
+        const AddData = () => {
+            document.getElementById('data').innerHTML = "Welcome To The Events In JS";
+        }
+
+        // change color
+
+        function ChangeColor() {
+            document.getElementById('data').style.color = "orange";
+        }
+
+        // **************************************************************************
+
+        // onmouseover- when we over mouse on that element
+        function demo1() {
+            document.getElementById('box1').style.backgroundColor = "maroon";
+        }
+
+
+        // **********************************************************************************
+
+        //onmouseleave- when we leave mouse from that specfic element
+        function demo2() {
+            document.getElementById('box1').style.backgroundColor = "orange";
+        }
+
+
+        // *******************************************************************
+
+        //onmousedown-
+        function demo4() {
+            document.getElementById('box1').style.backgroundColor = "purple";
+        }
+
+
+        // ***************************************************************************
+        // onmouseup
+        const demo3 = () => {
+
+            document.getElementById('box1').style.borderRadius = "50px";
+        }
+
+
+        // ***************************************************************
+
+        // onmouseenter
+
+        function demo5() {
+            document.getElementById('box2').style.backgroundColor = "pink";
+        }
+
+        // **************************************************************
+
+        // onmouseout
+
+        const demo6 = () => {
+            document.getElementById('box2').style.backgroundColor = "magenta";
+        }
+
+        // *****************************************************
+
+        // onmousemove
+
+        const demo7=function()
+        {
+            document.getElementById('box2').style.backgroundColor="yellow";
+            
+        }
+
+
+        // onmouseWheel-When we used wheel button
+        const demo8=()=>{
+            alert('Hello onmouseWheel event')
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

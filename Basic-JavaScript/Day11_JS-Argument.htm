@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Arguments -->
+
+    <script>
+
+        // Arguments-
+        // Used to handle extra / additional arguments when we pass while function calling
+        // Return whole arguments data
+        //But doesnt return a pure array
+
+
+        function Sum(a = 0, b = 0, c = 0) {
+
+            console.log(a + b + c);
+
+            //arguments
+            console.log(arguments);
+
+            //length
+            console.log(arguments.length);
+
+            // for loop
+            var sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+                sum += arguments[i];
+            }
+
+            console.log('Total Sum is ' + sum);
+        }
+        // Sum(100, 50, 50);//
+        // Sum(100, 50);//150
+        // Sum(100);//100
+        // Sum();//
+
+        // *****************************
+
+        Sum(100, 200, 50, 10, 20, 30, 50, 10);//JS by default Ignore extra /additional arguments
+
+        // Solution- Arguments
+        //
+
+    </script>
+</body>
+
+</html>

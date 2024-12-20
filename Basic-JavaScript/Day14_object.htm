@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // Object-
+        // Is a entity (which describe key value data) having methods and properties
+
+        // We can stored large amount of data
+        //In a key:value pair
+
+
+
+        // JS is a Object based sl
+
+        // i.e Object is king of JS
+
+        //Everyhting in a JS is a object
+
+
+        // *************************
+
+        // Array - Data access through Number indexing
+        // Object- Data access through Named / key Indexing
+
+        // *************************
+
+
+        // syntax
+
+        // const obj = {
+        //     // key:value
+
+        //     id: 123,
+        //     name: 'John'
+        // }
+
+
+        // ******************************************************************
+
+        // 3 ways to create Object
+
+        // literal way
+        // Creating instance of an Object
+        // Constructor Way
+
+        // **********************************************************
+
+
+        // Literal way
+        //Commonly Used
+
+
+        const obj = {
+
+            id: 1,
+            name: 'Avi',
+            email: 'abc@gmail.com',
+            mobile: '9876543210',
+            skill: ["HTML", "CSS", "Bootstrap", "JS"],
+            isEligible: true,
+            role: null,
+            personal_info: {
+
+            }
+        }
+        console.log(obj);
+
+        // **********************************
+
+        // Data accessed
+
+        //name
+        console.log(obj.name);
+
+        //OR
+        console.log(obj['name'])
+
+        //skill
+        console.log(obj.skill)
+        console.log(obj['skill']);
+
+        // *****************************************************************************************
+
+        // Creating instance of an Object
+        // using new keyword
+
+        // Provides functionality common to all JavaScript objects.
+        const obj2 = new Object();
+
+        obj2.id = 2345;
+        obj2.name = "Shubham";
+        obj2.skill = ["ReactJS", "AWS", "MUI", "Tailwind", "Git"];
+        obj2.mobile = "9876543210";
+
+        console.log(obj2);
+
+        console.log(obj2.name)
+
+        // **************************************************************
+
+        // Constructor way
+
+        // Automatically Called
+
+        //Is a special type of function/method which is used to initialize or set  object values or instance of a class
+        // using this keyword
+
+        // *****************************************
+
+        // this keyword-
+
+        // Reference Variable
+        // Refer to the current object
+        // In JS treated like a Global Object 
+
+        console.log(this);
+
+        console.log(window);
+
+        // *********************************************
+
+        function Emp(id, name, skill) {
+            // Assigned data using this keyword
+            this.id = id;
+            this.name = name;
+            this.skill = skill;
+        }
+
+        const result = new Emp(1224, "John", "ReactJS")
+        console.log(result);
+
+
+
+        // *******************************************************************************************
+
+
+
+        // We can defined Number/ string/ Array/ Boolean As a Object using new keyword
+
+
+        var no = 20;
+        console.log(no);//20
+        console.log(typeof no)//number
+
+        // Number As a Object
+        var no2 = new Number(100);
+        console.log(no2)
+        console.log(typeof no2);//object    
+
+        // **************************************************************
+        //Boolean
+
+        var isOnRole = false;
+        console.log(isOnRole);//false
+        console.log(typeof isOnRole);//boolean
+
+        // Boolean As a Object
+
+        var isEligible = new Boolean(true);
+        console.log(isEligible);//true
+        console.log(typeof isEligible);//object
+
+        // *********************************************
+        var str = "MERN Stack Developer";
+        console.log(str)
+        console.log(typeof str);//string
+
+        var str2 = new String("Front end Dev");
+        console.log(str2);
+        console.log(typeof str2);
+
+        // *****************************************************
+
+        const arr = [100, 200, 400, 500]
+        console.log(arr)
+        console.log(typeof arr);
+
+
+        // Array as a Object
+        const arr2=new Array("HTML","CSS","Modern JS")
+        console.log(arr2)
+        console.log(typeof arr2)
+
+
+
+    </script>
+
+</body>
+
+</html>

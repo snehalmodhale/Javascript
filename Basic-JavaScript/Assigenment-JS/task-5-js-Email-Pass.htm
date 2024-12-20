@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Email and Password</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            height: 50px;
+            width: 60%;
+            background-color: orange;
+            padding: 40px;
+            margin-left: 50px;
+        }
+        .box2{
+            height: 80px;
+            width: 60%;
+            background-color: tomato;
+            padding: 40px;
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <h2 style="margin-left: 50px;">Enter Your Email and Password</h2>
+    <br>
+    <br>
+
+    <div class="box1">
+
+    <form id="userForm">
+        <label for="email" style="font-size: 20px; font-weight: bold; background-color: rgb(234, 177, 196);"> Enter Email:</label>
+        <input type="email" style="border: 40px; font-weight: 600; padding: 10px 30px; background-color: aqua; border: solid 5px black;" id="email" required><br><br>
+    </div>
+
+    <div class="box2">
+        <label for="password" style="font-size: 20px; font-weight: bold; background-color: rgb(234, 177, 196);"> Enter Password:</label>
+        <input type="password" style="border: 40px; padding: 10px 30px;  font-weight: 600; background-color: aqua; border: solid 5px black;" id="password" required>
+
+        <br>
+        <br>
+        <button type="button" onclick="Password()" style="padding: 10px 15px; background-color: aqua;">Show Password</button><br><br>
+    </div>
+        <br><br>
+
+        <button type="button" onclick="submitForm()" style="margin-left: 50px; background-color: aqua; padding: 10px 20px;">Submit</button>
+    </form>
+
+    <br><br>
+
+
+    <h3 style="margin-left: 50px;">Your Email and Password:</h3>
+    <p id="result"></p>
+
+    <script>
+        function submitForm() {
+            
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            let result = "Email: " + email + "<br>Password: " + password;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function Password() {
+            let passwordField = document.getElementById("password");
+            
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

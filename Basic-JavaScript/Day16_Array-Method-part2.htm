@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- indexof 
+         lastindexof 
+         at  
+         isArray
+         fill
+         includes
+
+         slice
+         sort
+         reverse
+
+         
+         tostring
+         join
+         
+         flat
+         concat
+         from
+         valueOf
+
+
+             Additional Array Methods- filter,find , some and every ,reduce method
+
+     -->
+
+
+
+    <script>
+
+
+        const arr = [100, 200, 300, 400, 500, 200, 600, 700];
+
+        // indexOf()- return index of starting/first array element
+        console.log(arr.indexOf(300));//2
+        console.log(arr.indexOf(200));//1
+
+        // if not present
+        console.log(arr.indexOf(1000));//-1
+
+        //lastIndexOf()-return index of last array element
+        console.log(arr.lastIndexOf(300));//2
+
+        console.log(arr.lastIndexOf(200));//5
+
+        // *************************************************************
+
+        // at - return element from a given index
+
+        console.log(arr.at(2));//300
+        console.log(arr.at(3));//400
+
+
+        // ************************************************************8
+        // includes()- check element is present or not and return boolean value
+        console.log(arr.includes(200));//true
+
+        console.log(arr.includes(150));//false
+
+        // *******************************************************
+
+        // fill- fill static data from start to end in a given array
+        const arr2 = ["HTML", "CSS", "Bootstrap", "JS", "React", "MUI", "NodeJS", "Git"];
+        console.log(arr2);
+
+        console.log(arr2.fill("MERN Stack Developer"))
+
+        // ****************************************************
+
+
+        // isArray()- checks given data is array or not and return boolean value
+
+        console.log(Array.isArray(arr2));//true
+        console.log(Array.isArray([]));//true
+
+        console.log(Array.isArray({}));//false
+        console.log(Array.isArray("ABC"));//false
+        console.log(Array.isArray(null));//false
+
+        // ************************************************************************
+
+        // concat- Used to merge/concat 2 or more array
+
+        const arr4 = ["John", "Peter"];
+        const arr5 = ["john@gmail.com", 9876543210];
+
+
+        //concat
+        console.log(arr4 + "  " + arr5);
+        console.log(`${arr4 + arr5}`);
+
+
+        //pure array return
+        // console.log(arr4.concat(arr5))
+        console.log(arr4.concat(arr5, [10, 20]))
+
+        // ****************************************************************************
+
+        // slice()
+
+
+        // syntax
+        //slice(start,end(last index element ignored))
+
+
+        //Used to extract some portion of an given array
+        // Doesnt modified original array
+        //return new array
+
+        // -ve index allowed
+
+
+        const data = ["John", "Avi", "Shubham", "Swapnil", "Saheelam", "Harshal"];
+
+        console.log(data.slice(0, 3));//John Avi Shubham 
+
+        console.log(data.slice(2, 4));//
+
+        console.log(data.slice(2, 2));//[]
+
+        console.log(data.slice(2));//
+
+        console.log(data.slice(2, data.length));//
+
+        // -ve index allowed
+        console.log(data.slice(-3, -2));//Swapnil
+
+
+        console.log(data);
+
+        // substr()
+        // similar to slice
+        //but -ve index not allowed
+
+        const str = "React";
+        console.log(str.slice(0, 3));//Rea
+        console.log(str.substr(0, 3));//Rea
+
+        console.log(str.slice(-3, -2));//a
+
+        //not work
+        console.log(str.substr(-3, -2));//
+
+        // ***********************************************
+
+        // reverse()
+
+        //reversed given array
+
+        const arr6 = [200, 400, 100, 700, 800];
+        console.log(arr6)
+        console.log(arr6.reverse());
+
+        //
+        for (let i = arr6.length; i >= 0; i--) {
+            console.log(arr6[i]);
+        }
+
+        // **********************************************************
+
+        // sort()
+        // used to sort given array alphabetically
+
+        const arr7 = ["John", "Peter", "Avi", "Abil", "XYZ", "Harshal", "Shubham",];
+        console.log(arr7);//
+
+        console.log(arr7.sort());
+
+        // *********************************
+
+        // Number sorting
+        const arr8 = [100, 3000, 400, 200, 500, 1000, 2000];
+        // console.log(arr8.sort());
+
+        // compare function- compare values 
+        console.log(arr8.sort((a, b) => { return a - b }));
+
+        //descending order
+        console.log(arr8.sort((a, b) => { return b - a }));
+
+        // **********************************************************
+
+
+        const arr9 = ["React", "AWS", "MUI"]
+        console.log(arr9)
+
+        // Convert given Array into string
+
+        // tostring()- convert into string with comma separated value
+
+        console.log(arr9.toString());
+
+
+        // join()- convert into string but with separator
+        //by default comma separated value
+
+        // also pass separator
+        console.log(arr9.join());
+
+        console.log(arr9.join(" # "));
+        console.log(arr9.join(" * "));
+
+        // *********************************************************
+
+
+        // keys()
+        // values()
+        // entries()
+
+        // console.log(arr9.values())
+
+        // for (let x of arr9.values())
+        // for (let x of arr9.keys())
+        // for (let x of arr9.entries())
+        // {
+        //     console.log(x);
+        // }
+
+        // *********************************************************
+
+
+        // flat- Used to merging 2 or more sub Array into one
+
+        const arr10 = [100, 200, 300, 500, ["HTML", "CSS", "JS"], ["React", "AWS"]]
+        console.log(arr10);
+
+        // flat
+        console.log(arr10.flat())
+
+
+        // *********************************************
+
+        // from
+        // creates a new array from  a given string array object data
+
+        //Creates an array from an iterable object.
+
+
+        // // const str2 = "Front end Developer";
+        // const str2 = [10, 20, 40, 50];
+        // console.log(Array.from(str2))
+
+
+        // **************************************
+
+        // valueOf()
+
+
+        const arr11 = [100, 200, 300, 500];
+        console.log(arr11);
+
+        //with method
+        console.log(arr11.valueOf())
+
+
+    </script>
+
+
+</body>
+
+</html>

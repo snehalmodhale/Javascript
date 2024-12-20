@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // Ways to Write Function
+
+        //Normal Function
+        //Variable expression function
+        //Anonymous function
+        // Arrow function/Fat Arrow function / Lamda function
+
+        //Callback Function
+        //Self invoking function
+        //nested function
+
+
+        // ***************************************************
+
+        // Normal function
+
+        function Demo1(a = 1, b = 1) {
+            console.log(a * b);
+        }
+        // Demo1();//
+        Demo1(20, 10);//200
+
+
+
+        // ********************************************
+
+        //Variable expression function-
+
+        //Function treated like any other variable
+        //stored function in a variable
+
+        const Demo2 = function Demo() {
+            console.log("Hello Variable expression")
+        }
+        //
+        Demo2();
+
+        // *****************************************************
+
+        // Anonymous function-No name to function 
+
+        const Demo3 = function (a, b) {
+            console.log(a + b);
+            console.log("Hello Anonymouse function")
+        }
+        Demo3(10, 20)
+
+
+        // ************************************************************
+
+        // Modern Way to write function
+
+        //Arrow function/ Lambda function/ Fat Arrow function
+
+        //ES-6 Features
+        //One of the most efficient / easy way to write our function
+        //Easy to write
+        //Easy to read
+
+        //No need to bind this keyword i.e by default access this keyword
+
+        //
+        // syntax
+        // const demo=()=>{
+
+        // }
+        // demo()
+
+        // ******************************************
+
+        const Demo4 = () => {
+            console.log("Hello Arrow function");
+        }
+        Demo4()
+
+
+
+        // we can write in single line also
+        const demo5 = (a = 0, b = 0) => console.log(a + b);
+        demo5(100, 400);
+
+        // **************************
+
+        // when we return something must {}
+        const demo6 = (a, b) => { return a * b };
+        console.log(demo6(10, 20));
+
+        // ***************************************
+
+
+        // ()- no need when we have single parameter
+
+        const demo7 = name => console.log('Your Name Is ' + name);
+        demo7('Avi')
+
+
+        // ******************************************************************************************
+
+
+        // Hoisting - Used variable before declartion
+
+
+        // a=20;
+        // console.log(a);
+        // var a;
+
+
+        // a = 10;
+        // console.log(a);// Cannot access 'a' before initialization
+        // let a;
+
+
+        // *****************************************************
+
+        // Normal function is hoisted
+
+        // Called before declaration
+
+
+        // function A() {
+        //     console.log("Normal Function is Hoisted !!")
+        // }
+        // A()
+
+
+
+
+        A();
+        function A() {
+            console.log("Normal Function is Hoisted !!")
+        }
+
+        // ************************************************************
+        // Other function are not hoisted
+
+
+        //Treated function like a variable
+
+
+        B();//ReferenceError: Cannot access 'B' before initialization
+
+        const B = ()=> {
+            console.log("Other Function Are Not Hoisted")
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

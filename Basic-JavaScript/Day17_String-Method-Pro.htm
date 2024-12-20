@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- String- 
+    
+    Collection of characters which  stored in "" or ''
+
+    Starts indexing from 0
+
+    Stored a single value
+
+   
+    -->
+
+
+    <script>
+
+
+        // literal way
+        const str = "Front end Developer";
+        console.log(str);
+
+        //Creating instance of string using new keyword
+        const str2 = new String("Hello Developers");
+        console.log(str2);
+
+
+        // **************************************************************************
+
+        // Methods and Properties
+
+        // length
+        //Including Spacing also
+
+        const str3 = "React Developer";
+        console.log(str3);
+
+        console.log(str3.length);//`5
+
+
+        // ******************************************************
+        // slice
+        //substring
+
+        // extract some specific portion of a given string
+        //doesnt modified original string
+        //return new string
+
+        // -ve index allowed
+
+        // slice(start, end?(last index charcter ignored))
+
+        console.log(str3.slice(0, 5));//React
+        console.log(str3.slice(-4, -2));//op
+
+
+
+        console.log(str3.slice(0));//   
+        console.log(str3.slice(0, str3.length));//   
+
+        // *************************8
+        // substring
+        // similar to slice but -ve index not allowed
+
+        console.log(str3.substring(0, 5));//React
+        console.log(str3.substring(-4, -2))
+
+        console.log(str3.substring(3, 5));//ct
+
+        // ********************************************
+
+
+        // substr()
+
+        // also used to extract part of a string
+        //syntax similar to splice();//
+
+        //substr(start,length);
+
+        console.log(str3.substr(0, 5));//React
+        console.log(str3.substr(3, 5));//ct De
+        console.log(str3.substr(0));//React Developer"
+
+
+
+        // *********************************************************
+
+        // toUpperCase
+        // toLowerCase
+
+        const str4 = "Modern JS Developer";
+
+        console.log(str4)
+        console.log(str4.toLowerCase())
+        console.log(str4.toUpperCase())
+
+
+        // **************************************************
+
+        // indexOf()
+        // lastIndexOf()-return last index of a given character
+        // at() -return character of a given location
+        // charAt()
+
+        //charCodeAt()
+
+        console.log(str4.indexOf('e'));//3
+
+        console.log(str4.lastIndexOf('e'));//17
+
+        console.log(str4.at(2));//d
+        console.log(str4.charAt(2));//d
+
+
+        //Return Unicode / ASCII value of given character of that location
+        // A - 65
+        // Z - 90
+        // a - 97
+        // z - 122
+        //charCodeAt()
+
+        console.log(str4.charCodeAt(2));//100
+
+        // **********************************************
+
+        // Convert Array to string
+        // toString()
+        // join()
+
+        //String data convert into An Array
+        //split()
+
+
+        const str5 = "MERN Stack Developer";
+        console.log(str5)
+
+        // split
+        console.log(str5.split());//Array
+
+        // split by word
+        console.log(str5.split(' '));
+
+        //split bu character
+        console.log(str5.split(''));
+
+
+        // ****************************************************************************
+
+        // Reverse given string 
+        console.log(str5.split(' ').reverse().toString());
+
+        // ****************************************************************************
+
+        //replace
+        //trim
+        // padStart
+        // padEnd
+
+        //replace(search,replace)- replace old string with new one
+
+        let str6 = "Cloud Engineer";
+
+        // str6="JS Developer";
+
+        console.log(str6)
+        console.log(str6.replace('Cloud', 'Front end'))
+
+        console.log(str6.replace('AWS', 'Front end'));//Cloud Enginner
+
+        // ***************************************************
+
+        //repeat
+        const str7 = "ReactJS"
+        console.log(str7.repeat(3));
+
+        // **********************************************************
+
+        // trim-  empty white spacing remove
+        const str8 = " Front End ";
+        console.log(str8);
+        console.log(str8.length);
+
+
+        // *************************************************
+
+        // Removes the leading and trailing white space 
+        var result = str8.trim()
+        console.log(result);
+        console.log(result.length);
+
+
+        // ***************************************
+
+        // trimStart- remove leading / starting white space
+
+        var result2 = str8.trimStart()
+        console.log(result2);//Front end
+        console.log(result2.length);//10
+
+        //trimEnd-Removes the trailing / last white space 
+        var result3 = str8.trimEnd();
+        console.log(result3)
+        console.log(result3.length);//10
+
+
+
+        // **************************************************
+
+        // padStart
+        // pasEnd
+
+        // Attached  a new data to given string to reach its maxiumum length
+
+        let str10 = "ABC";
+        console.log(str10.padStart(10, "*"))
+        console.log(str10.padEnd(7, "#"))
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Discount</title>
+</head>
+<body>
+    <script>
+        // Shopping Cart Eg
+        // Take shop_amt from user
+
+        let shop_amt = +prompt('Enter Your Shopping Amount');
+        let disc = 0;
+
+        if (shop_amt >= 5000 && shop_amt<10000) {
+
+            disc = 5;
+        }
+        else if(shop_amt>=10000 && shop_amt<15000){
+            disc = 10;
+        }
+        else if(shop_amt>=15000 && shop_amt<20000){
+            disc = 15;
+        }
+        else if(shop_amt>=20000 && shop_amt<25000){
+            disc = 20;
+        }
+        else if(shop_amt>=25000 && shop_amt<30000){
+            disc = 30;
+        }
+        else {
+            disc = 0;
+        }
+
+        let disc_amt = shop_amt * disc / 100;
+
+        document.write(`<h1>Your Shopping Amount Is ${shop_amt}</h1>`)
+        document.write(`<h2> You Get A ${disc}% Discount So Your Discount Amount Is ${disc_amt} </h2>`)
+
+        let netTotal = shop_amt - disc_amt
+        document.write(`<h1>Net Total Is <mark> ${netTotal} </mark> </h1>`)
+
+
+    </script>
+</body>
+</html>

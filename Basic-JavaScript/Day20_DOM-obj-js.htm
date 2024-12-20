@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- DOM -Document Object Model  
+     
+
+    Is a hirarchy of html content/document i.e Tree based structure
+
+    When web page is load on a browser it creates a dom tree object
+
+    Using html dom methods and properties JS get all the power to make html dynamic 
+
+    JS get all power using DOM methods and properties to make html dynamic i.e
+    We can Add, Change, Remove html element,styling,attributes....
+
+
+    i.e In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+    
+
+    **********************************************************************************
+
+
+    What is the DOM?
+The DOM is a W3C (World Wide Web Consortium) standard.
+
+The DOM defines a standard for accessing documents:
+
+"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+The W3C DOM standard is separated into 3 different parts:
+
+Core DOM - standard model for all document types
+XML DOM - standard model for XML documents
+HTML DOM - standard model for HTML documents
+
+
+
+
+i.e In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+
+    -->
+
+    <h1 style="background-color: black;color: orange;text-align: center;padding: 30px;">HTML DOM Methods</h1>
+
+    <h1 id="data">Welcome To The HTML DOM</h1>
+
+
+    <h3 class="heading">Hello HTML DOM 1</h3>
+    <h3 class="heading">Hello HTML DOM 2</h3>
+    <h3 class="heading">Hello HTML DOM 3</h3>
+    <h3 class="heading">Hello HTML DOM 4</h3>
+    <h3 class="heading">Hello HTML DOM 5</h3>
+
+<hr>
+<br>
+
+<input type="text" name="useremail" id="useremail" class="useremail" value="shubham@gmail.com">
+
+
+
+    <script>
+
+        // DOM Methods - to Access html elements
+
+        //         document.getElementById()
+        //         document.getElementsByClassName()
+        //         document.getElementsByTagName()
+        //         document.getElementsByName()
+
+        //         document.querySelector()
+        //         document.querySelectorAll()
+
+
+        var doc = document;
+        console.log(doc);
+        console.log(doc.body);
+        console.log(document.head);
+
+
+        // *********************************************************
+
+        // document.getElementById()
+        //
+        // get Data
+        // var result = document.getElementById('data').innerHTML;
+
+        // no need to write dom method
+        var result=data.innerHTML;
+        console.log(result);
+
+        //set data
+        document.getElementById('data').innerHTML = "Hello Updated DOM";
+
+
+        // ******************************************************************
+
+        // document.getElementsByClassName()
+
+        //Return html collection of html elements like array indexing format
+        //0  1  2
+
+        //Access through indexing
+
+
+        var result2 = document.getElementsByClassName('heading');
+        console.log(result2)
+
+        // get Data
+        var result3 = document.getElementsByClassName('heading').innerHTML; //undefined
+        console.log(result3);
+
+        // *********************************************
+
+        //Access through indexing
+        // var result4=document.getElementsByClassName('heading')[0].innerHTML;
+        var result4 = document.getElementsByClassName('heading')[2].innerHTML;
+        console.log(result4);
+
+
+        var result5 = document.getElementsByClassName('heading');
+        console.log(result5)
+        console.log(result5.length);
+
+        // Get All data
+        for (let i = 0; i < result5.length; i++) {
+            // console.log(result5[i].innerHTML)
+
+            // /set data
+            result5[i].innerHTML = "Hello Updated DOM " + i
+
+        }
+
+        //set data
+        document.getElementsByClassName('heading')[2].innerHTML = "Hello Dear";
+
+
+        console.log("*************")
+
+        // **************************************************************************************
+
+        // document.getElementsByTagName()
+
+
+        //Return html collection
+        //Accessed through number Indexing
+
+        var result6 = document.getElementsByTagName('h3');
+        console.log(result6);
+
+        var result7 = document.getElementsByTagName('h3')[0].innerHTML;
+        console.log(result7);
+
+
+        //for loop
+
+
+        //set data
+        document.getElementsByTagName('h3')[3].innerHTML="Hello By Tag Name";
+
+        // *************************************************************************
+
+        // document.getElementsByName()
+        // in form input field
+
+        //Accessed through indexing
+
+        
+        // var result8=document.getElementById('useremail').value
+        // var result8=document.getElementsByClassName('useremail')[0].value;
+        // var result8=document.getElementsByTagName('input')[0].value;
+        
+        //get data
+        var result8=document.getElementsByName('useremail')[0].value;
+        console.log(result8);
+
+        // set data
+        document.getElementsByName('useremail')[0].value="john@gmail.com";
+
+
+
+        console.log("############")
+        // ***********************************************************************
+
+        // Alternative way
+        // Universal Method
+
+
+        // document.querySelector()- Return single first matching html elements from  that specific selector
+
+        // document.querySelectorAll()- Return All html element from given html documents
+
+        // ********************************************************************8
+        // document.querySelector()- Return single first matching html elements from  that specific selector
+
+
+
+        // var result9=document.querySelector('#id/.class/tag');
+
+        // var result9=document.querySelector('#data').innerHTML;
+        // var result9=document.querySelector('.heading').innerHTML;
+        var result9=document.querySelector('h3').innerHTML;
+        console.log(result9)
+
+
+        // ****************************************************************
+
+        // document.querySelectorAll()- Return all matching html elements from that matched selectors
+
+        // must indexing
+        
+
+        // var result10=document.querySelectorAll('#data')[0].innerHTML;
+        var result10=document.querySelectorAll('.heading')[2].innerHTML;
+        console.log(result10);
+
+
+
+        
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

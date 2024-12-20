@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Callback function
+     
+    I will call you back
+
+    One function is execute into another function
+    one function execute after another function finished their execution
+
+    i.e passing a one function to another function as a Arguments
+
+    -->
+
+
+    <script>
+
+
+        // function A() {
+        //     console.log("Function A");
+        //     B()
+
+        // }
+        // A()
+
+
+        // function B() {
+        //     console.log("Function B");
+        // }
+
+        // ******************************
+
+        // function A() {
+        //     console.log("Function A");
+        // }
+
+
+        // function B() {
+        //     console.log("Function B");
+        //     A()
+        // }
+        // B()
+
+
+
+        // *******************************************8
+
+
+        // callback function
+
+        // JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+
+
+        function A() {
+            console.log("Function A Called")
+        }
+
+
+        // Passing a parameter for above function
+        function B(callback) {
+
+            //function Calling
+            callback();
+            console.log("Function B Called")
+        }
+
+        //Passing a A function to B function as a Arguments
+        B(A)
+
+
+        // ****************************************************************************
+
+        function Greet() {
+            console.log("Hello Good Morning");
+        }
+
+
+        function Msg(callback, name) {
+
+            callback()
+            console.log("Your name is " + name)
+        }
+        Msg(Greet, "Abil")
+
+        // ****************************************************
+
+        function Emp(empId, empCTC) {
+            console.log(`Hello Emp Id ${empId} And Your CTC Is ${empCTC}`);
+        }
+
+        // Emp(1234, '20LPA')
+
+
+        function Dept(callback, empRole) {
+            callback(1234, '10LPA')
+            console.log("EmpRole Will be " + empRole)
+        }
+        Dept(Emp, "Front end Developer")
+
+        // *****************************************************************
+
+        function X(name, skill) {
+            return "Your Name Is " + name + "  Your Skill is " + skill
+        }
+
+        function Y(callback, empRole) {
+            // console.log(callback("John", "MERN Stack Dev"))
+            // console.log("Your Role Is "+empRole);
+
+            return callback('John', "MERN Stack Developer") + empRole;
+        }
+        console.log(Y(X, "Cloud Engineer"));
+
+    </script>
+</body>
+
+</html>

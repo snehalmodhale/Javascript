@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Events  -->
+
+
+    <button onclick="Demo1()">Click Here</button>
+
+
+    <!-- Alternate Modern Way -->
+
+    <!-- addEventListener Method -->
+    <!-- used to attached any events to html elements dynamically -->
+    <!-- syntax- -->
+
+    <!-- addEventListener('event',function handler) -->
+
+    <button id="btn1">Click Here 2</button>
+
+
+    <button id="btn2">Change Color</button>
+
+    <button onclick="RemoveEvent()">Remove Event Listener</button>
+
+
+
+
+
+    <script>
+
+        function Demo1() {
+
+            alert()
+        }
+
+        // *********************************************************
+        // addEventListener
+
+        document.getElementById('btn1').addEventListener('click', function () {
+            alert('Hello addEventListener Method')
+        })
+
+
+        const A = () => {
+            document.getElementById('btn1').style.backgroundColor = "black";
+            alert()
+        }
+
+
+
+
+        // smart way
+
+        // btn1.addEventListener('dblclick', ()=>{
+
+        // })
+
+        btn2.addEventListener('click', A);
+
+
+
+        // *******************************************************************************
+
+        // removeEventListener
+
+        function RemoveEvent() {
+            alert('Successfully Remove');
+            document.getElementById('btn2').removeEventListener('click', A);
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Function With Parameters -->
+
+    <!--  To Pass dynamic values-->
+
+    <!-- Parameters - Passing a variables / values while function declartion i.e parameter -->
+    <!-- Arguments- Passing a Actual values while function calling i.e Actual Values pass which points to parameters -->
+
+
+
+    <button onclick="Sum(200,40)">Click Here</button>
+
+
+    <button onclick="Mult(10,5,20);">Multiplication</button>
+    <script>
+
+
+        // function Addition() {
+
+        //     console.log(200 + 300)
+
+        // }
+
+        // Addition()
+
+        // ******************************************
+
+
+        // Passing a 2 Parameters while function Declaration
+        function Sum(a, b) {
+            console.log(a + b);
+
+        }
+
+
+        // Passing a Actual values while Function calling i.e Arguments1
+        Sum(100, 300)
+        Sum(100, 500);
+        Sum(50, 40)
+
+
+        // *********************************************************
+
+        function User(fname, lname) {
+            console.log(`Your Name Is ${fname} and Your Last Name Is ${lname}`);
+        }
+        User('John', 'Peter');
+        User('Avi', 'Kanwade');
+
+
+        // *****************************************
+
+
+        function Mult(x, y, z) {
+            console.log(x * y * z);
+        }
+
+        // Mult(10,5,20);
+    </script>
+
+
+
+</body>
+
+</html>

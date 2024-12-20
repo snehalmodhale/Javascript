@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- setTimeout-
+
+    Execute a function only once in a specific interval
+
+    syntax-
+
+    setTimeout(handler,ms);
+
+    OR
+    setTimeout(()=>{
+    },ms)
+
+
+    OR
+    setTImeout(function(){
+    },ms)
+
+     
+    -->
+
+    <button onclick="Ani1()">Start Ani</button>
+
+    <button onclick="StartInt()">Start Timeout</button>
+    <button onclick="StopInt()">Stop Timeout</button>
+    <br>
+    <hr>
+
+    <!-- <img src="./teddy.jpg" alt="" id="img" style="background-color: black;"> -->
+
+    <div class="box" id="box"></div>
+
+
+    <script>
+
+        // setInterval(()=>{
+        //     alert('Hello setInterval Function!!');
+        // },3000);
+
+
+        // setTimeout(()=>{
+        //     alert('Hello setTimeout function executes only once')
+
+        // },3000)
+
+        // ***************************************
+
+
+        // function A()
+        // {
+        //     alert('Hello setTimeout Function ')
+        // }
+
+        // setTimeout(A,5000);
+
+        // ********************************************************************
+
+
+        const Ani1 = () => {
+            document.getElementById('box').style.borderRadius = "50%";
+        }
+
+
+        // 
+
+
+
+        // *******************************************************
+        var x;
+        const StartInt = () => {
+
+            alert("Start Animation")
+            x = setTimeout(Ani1, 4000);
+
+        }
+
+
+
+        // *********************************************
+
+        // clearTimeout()
+
+        const StopInt = () => {
+            alert("Stop Animation")
+            clearTimeout(x)
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

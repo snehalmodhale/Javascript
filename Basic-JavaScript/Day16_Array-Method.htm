@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- Array- Methods And Properties
+     
+    To Perform Multiple Operations on a Given Array
+    -->
+
+
+    <script>
+
+        // Array Object
+
+        // JSON object
+        const arr = [
+
+            {
+                id: 1,
+                pName: 'Laptop',
+                pPrice: '800000'
+
+            },
+
+
+            {
+                id: 2,
+                pName: 'Laptop',
+                pPrice: '800000'
+            },
+
+            {
+                id: 3,
+                pName: 'Laptop',
+                pPrice: '800000'
+
+            }
+        ]
+
+
+        console.log(arr)
+        console.log(arr[1])
+
+        // ********************************************************************
+
+
+        const Arr = ["HTML", "CSS", "JS", "ReactJS", "MUI", "Git", "AWS", "Angular"];
+        console.log(Arr);
+
+
+        // length- return length of a given array
+        console.log(Arr.length);
+
+
+        // *****************************************************************
+
+        // Add or Remove Array Elements
+
+        //Work and Syntax
+        //Original Array Modified or not
+        //Return ?
+
+        // ***************************************
+
+        // push()
+
+        //Add array element to the last index of an Array
+        //Original Array Modified
+        //returns the new length of the array.
+
+
+        //New elements to add to the array.
+        Arr.push("Front end Dev");
+        Arr.push(100)
+
+
+        // return-returns the new length of the array.
+        console.log(Arr.push("MERN Stack"));//11
+
+
+        console.log(Arr)
+
+        // **************************************************************
+
+
+        const arr2 = [10, 30, 40, 50, 60]
+
+        // pop()
+        // Removes the last element from an array and returns it. 
+        //Original Modified
+
+        // return remove element
+
+
+        arr2.pop()
+        arr2.pop()
+
+        console.log(arr2.pop());//40
+
+
+        console.log(arr2);
+
+
+        // *******************************************************************
+
+        // Unshift- Used to add element to starting index of an Array
+        // Original Modified
+        //returns the new length of the array.
+
+
+        const arr3 = [100, 200, 300, 500, 600];
+
+        // arr3.push(1000);
+        // arr3.pop();
+
+        arr3.unshift(1000)
+        arr3.unshift(2000)
+
+        console.log(arr3.unshift(500));//8
+
+        console.log(arr3)
+
+
+        // ***********************************************************
+
+        // shift()
+        // Removes the first element from an array and returns it.    
+        //Original Modified
+        //return remove element
+
+        const arr4 = [10, 30, 40, 50, 60, 70];
+        console.log(arr4);
+
+        arr4.shift()
+        arr4.shift()
+
+
+        console.log(arr4.shift())//40
+
+        console.log(arr4)
+
+        // *********************************************************
+
+        // Multiple elements add remove
+
+        // splice()
+
+        // syntax
+        // splice(start,length)
+
+        // Original Modified
+
+        const arr5 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+
+        // arr5.splice(0,3);//
+
+        // arr5.splice(2,4);//
+
+        // arr5.splice(5,7);//
+
+
+        // empty array
+
+        // arr5.splice(0,arr5.length);//
+        // arr5.splice(0);//empty array
+
+
+        // ***************************************
+        // Add element
+
+        // arr5.splice(0, 0, 1000, 2000, 3000)
+
+        // arr5.splice(2, 2, 23);
+
+        // *********************************************
+
+
+        // return new array of remove elements
+        console.log(arr5.splice(0, 3));//[10,20,30]
+
+
+        console.log(arr5);
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

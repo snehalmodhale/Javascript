@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Objects Methods and Properties -->
+
+    <!-- Used to Perform Multiple Operations on a Object -->
+
+    <script>
+
+
+        const products = {
+
+            p_id: 1,
+            p_name: 'Laptop',
+            p_price: '100000',
+            p_Brand: 'HP',
+            p_processor: 'Intel I3',
+            p_Description: {
+                pRAM: '8GB',
+                pROM: '256SSD',
+                pGraphics: 'NVDIA',
+            }
+
+        }
+        console.log(products)
+
+
+
+        // Object.keys()
+        // Object.values()
+        // Object.entries()
+
+        // Object.getOwnPropertyNames()- 
+
+        // ***********************************************************
+
+        // Object.keys()-return a keys from a given object in an Array format
+
+
+        //Object- Provides functionality common to all JavaScript objects.
+
+
+        console.log(Object.keys(products));
+
+
+        // Returns the names of the own properties of an object. 
+        // The own properties of an object are those that are defined directly
+        console.log(Object.getOwnPropertyNames(products));
+
+
+        // ***************************************************************
+
+        // Object.values()- Return a values of a given object in an Array format
+
+        console.log(Object.values(products));
+
+
+        // ***********************************************************
+        // Object.entries()- return a key values data of a given object in an Array format
+
+
+        console.log(Object.entries(products));
+
+
+        // for (let keys in products) {
+        //     console.log(`${keys}: ${products[keys]}`);
+        // }
+
+        var result = Object.entries(products);
+        for (let x of result) {
+            console.log(x);
+        }
+
+
+
+
+        console.log("**********************")
+
+
+
+        // is
+        // isNaN
+        // isFinite
+
+        // is- Return true when both values are same
+
+
+        console.log(Object.is(20, 20));//true
+        console.log(Object.is(20, "20"));//false
+        console.log(Object.is(NaN, NaN));//true
+
+        // isNaN()
+        console.log(isNaN(300));//false
+        console.log(isNaN("Shubham"));//true
+
+
+        // Determines whether a supplied number is finite.
+        // isFinite
+        // ********************************************************
+
+
+        // Object.freeze()-It prevents the object values modification and also prevents the new addition of properties in aobject
+
+        // i.e-  We can not Add new properties and also we cant update existing values
+
+
+        // *****************************************
+        // Object.seal()
+
+        //i.e  We can update existing values but we cant Add new properties
+
+
+
+        const user = {
+            id: 1,
+            name: 'John',
+            empRole: 'Front end dev',
+            empCTC: '10LPA',
+            empEmail: 'john@gmail.com',
+        }
+
+
+        // Object.freeze(user);
+
+
+
+        // Object.seal(user);
+
+        // ****************
+
+        // update
+        user.empRole = "MERN Stack Dev";
+
+
+        //new add
+        user.empMobile = "9876543210",
+
+            console.log(user);
+
+
+
+        // **************************************************************/
+
+        // Object.isFrozen()
+        // Object.isSealed()
+        // Object.isExtensible()
+
+        //Return true when we cant add new properties  and cant update object values 
+        console.log(Object.isFrozen(user))
+
+        console.log(Object.isSealed(user))//true
+
+
+
+        //Returns a value that indicates whether new properties can be added to an object.
+        console.log(Object.isExtensible(user));//true
+
+        // **********************************************************************
+
+        // Returns an array of all symbol properties found directly on object o.
+        // Object.getOwnPropertySymbols()
+
+        // Object.getOwnPropertyDescriptors()
+        console.log(Object.getOwnPropertyDescriptors(user));
+
+        // ***********************************************************
+
+        // Object.create();
+
+
+        // Copy one object data to another targeted object data
+        // Object.assign(target,source)
+
+        const obj1 = {
+            id: 1,
+            name: 'Sanket',
+        }
+
+        const obj2 = {
+            email: 'sanket@gmail.com',
+            skill: 'React Dev',
+
+        }
+
+        console.log(Object.assign(obj2, obj1, { empCTC: '20LPA' }));
+
+        // *********************************************************
+
+        //Prototype of a Object
+
+        // JS return by default Array and object prototype
+
+        console.log(Object.getPrototypeOf(user))
+
+        // Object.setPrototypeOf()
+
+
+        // ***********************************************
+
+        // IQ
+
+        const obj3 = {
+            id: 1,
+            name: 'Peter',
+        }
+        console.log(obj3);
+
+
+        // Return given object as it is but using method
+        // valueOf()
+
+        console.log(obj3.valueOf());
+
+
+
+
+
+
+
+
+    </script>
+    

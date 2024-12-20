@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- Return keyword
+     
+
+    return a value outside the function
+    Executes a value outside the function
+    
+
+    It stops the execution of our function after return data
+    -->
+
+    <script>
+
+
+
+        function Addition(x, y, z) {
+            console.log(x + y + z);
+
+        }
+        Addition(20, 30, 50);//100
+
+        // ***********************************************
+
+        function Multiplication(a, b) {
+
+            return a * b;
+        }
+
+        var result = Multiplication(20, 10);//
+        console.log(result);
+
+        // *********************************************
+
+        function Emp(empId, empName, empRole) {
+            return "Hello " + empName + " Your Emp Id Is " + empId + "  Your Role Will be  " + empRole
+
+        }
+
+        var res = Emp(1234, 'Abil', 'Front end Developer');
+        console.log(res);
+
+
+        //2
+
+        console.log(Emp('4567', 'John', 'MERN Stack Developer'))
+
+        // **************************************************************************
+
+
+        function A(empCTC) {
+            console.log("Hello Before A");
+            return "Your CTC Is " + empCTC;
+
+            // It will not execute
+            console.log("Hello After A");
+
+        }
+        console.log(A("20LPA"));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Default Parameter- Passing a default value while function declaration -->
+    <!-- When we didnt pass enough/sufficient arguments -->
+
+
+    <script>
+
+
+        function Add(a, b) {
+            console.log(a + b);
+        }
+
+        Add(100, 300);//
+
+        // When we didnt pass enough/sufficient arguments
+
+        // Invalid Operation
+        Add(200);//NaN
+
+
+        // **********************************************
+        // Solution
+
+        // Default Parameter- Passing a default value while function declaration
+
+
+        function Sum(x = 0, y = 0, z = 0) {
+            console.log(x + y + z)
+        }
+
+        Sum(100, 50, 50);//200
+
+
+        Sum(100, 50);//150
+        Sum(100);//100+0+0=100
+
+        Sum();//0
+
+
+        // *******************************************
+
+        function User(name = "John", empId = 0) {
+            console.log(name + "  " + empId);
+        }
+
+        User('Pratik',1234);
+        User('Pratik');
+        User();
+
+
+        
+    </script>
+
+
+
+</body>
+
+</html>

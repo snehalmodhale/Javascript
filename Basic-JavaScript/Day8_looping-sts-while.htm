@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //Looping statement = execute a same condition multiple times until becomes false.
+
+        // while loop
+        // do while loop
+        // for loop
+
+
+    
+    // I) While loop =
+            // let i =0;
+            // while(i<=10)
+            // {
+            //      document.write("<h1> Hello snehu </h1>");
+            //     i++;
+            // }
+        // *********************************** 
+            // let Z = 1;
+            // while(Z<=50){
+            //     document.write(Z+ " ");
+            //     Z++;
+            // }
+        // ***********************************
+            // let x = 1;
+            // var sum =0;
+            // while(x <= 50){
+            //     if(x % 2 ==0){
+
+               
+            //     document.write(i= " ");
+            //     sum +=x;
+            // }
+            // x++;
+            // }
+            // document.write("Total sum is " +sum)
+
+            // document.write("<br>")
+        // ************************************
+
+        // 100 to 50
+
+        // let p = 100;
+        // while (p>= 50){
+        //     document.write(p + " ")
+        //     p--;
+        // }
+
+    // *******************************************
+
+    // Nested while loop 
+
+        // let y = 2;
+        // while (y <= 15){
+        // document.write(`<h2>${y}</h2>`);
+
+        // //  nested loop
+
+        // let z =1;
+        // while (z <= 10){
+        //     document.write(z + " ");
+        //     z ++;
+        // }
+        // }
+// ********************************************
+            // let y = 2;
+            // while (y <= 15) {
+            //     document.write("<h2>" + y + "</h2>" );
+            //     let z = 1;
+            //     while (z <= 10) {
+            //         document.write(y*z + " ");    //3*1  2
+            //         z++
+            //     }
+            //     y++;
+            // }
+
+// ****************** convert table format table****************************
+
+    document.write("<table border='1' width='100%' cellspacing='0' cellpadding='10'>")
+
+    let y = 2;
+    while (y <= 15) {
+    // document.write("<h2>" + y + "</h2>");
+
+
+    document.write("<tr>")
+
+    let z = 1;
+    while (z <= 10) {
+        var result = y * z
+        document.write("<td>" + result + "</td>");//
+        z++;
+
+    }
+    y++;//3
+
+    document.write("</tr>")
+    }
+
+    document.write("</table>")
+
+    // *******************************
+    let s = 2;
+        
+        while (s <= 15) {
+
+            var sum = 0;
+
+            document.write("<h2>" + s + "</h2>");
+
+            let t = 1;
+            while (t <= 10) {
+                var result = s * t;
+                document.write(s * t + " ");
+                sum += result;
+                t++;
+
+            }
+            s++;//3
+
+            document.write("Sum Is: "+sum)
+        }
+
+    </script>
+
+</body>
+</html>

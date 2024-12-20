@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // we can update values\
+
+        const obj = {
+            id: 1,
+            pName: 'Laptop',
+            pBrand: 'HP',
+            pProcessor: 'Intel/AMD',
+            pPrice: '50000',
+
+            pRAM: '16GB',
+            pRAM: '8GB',
+
+            pDetails: {
+                pSerialId: 123234435465,
+                pKey: 'ABCD123',
+            }
+
+        }
+
+        // we can update value
+        obj.pPrice = "100000";
+
+        // Avoid same key repetitive if used it will overlapped and consider last one
+
+        console.log(obj)
+
+
+        // *******************************************************************************************************
+
+        // Object Iterating
+
+        // for of
+        //Used to iterate array object
+        //it must be iterable
+        //Return only values
+
+        // ****************************
+
+        //for in-Used to iterate Array and object
+        //Return key value data
+
+        // for (let x of obj) {
+        //     console.log(x);//obj is not iterable
+        // }
+
+
+
+        for (let keys in obj) {
+            // console.log(keys);
+            // console.log(obj[keys]);
+
+            console.log(`${keys}: ${obj[keys]} `)
+        }
+
+        // *********************************************************
+
+
+        // nested object
+
+        for (let keys in obj.pDetails) {
+            console.log(keys + " = " + obj.pDetails[keys]);
+        }
+
+
+        // ***************************************************************************8
+
+
+
+        const emp = {
+
+            id: 1,
+            empSkill: ["Front end", "Backend ", { skill1: 'ReactJS', skill2: 'NodeJS', skill3: ["AWS", "MUI"] }],
+            empRoles: ["Frontend Dev", "MERN Dev", ["Full Stack Dev", "AWS Dev"], "JS Dev"],
+        }
+
+        console.log(emp)
+
+
+        // empSkill
+        console.log(emp.empSkill);
+
+        //Backend
+        console.log(emp.empSkill[1])
+
+        // nested skill object
+        console.log(emp.empSkill[2]);
+
+        //ReactJS
+        console.log(emp.empSkill[2].skill1)
+
+
+        //MUI
+
+        console.log(emp.empSkill[2].skill3[1]);
+    </script>
+
+
+</body>
+
+</html>
